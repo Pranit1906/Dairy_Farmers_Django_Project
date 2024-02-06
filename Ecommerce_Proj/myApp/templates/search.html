@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Search Page{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                {% for prod in product %}
+                <div class="col-sm-4 text-center hover-shadow mb-4">
+                    <a href="{% url 'product-details' prod.id %}" class="btn">
+                        <div class="card bg-info">
+                            <div class="card-body">
+                                <img src="{{prod.product_Image.url}}" alt="err" width="300" height="200">
+                                <h5 class="fw-bold mt-2">{{prod.title}}</h5>
+                                <h5 class="fw-bold text-danger">Rs. {{prod.discounted_price}}/-</h5>
+                                <small class="fw-light text-decoration-line-through">{{prod.selling_price}}</small>
+
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock main-content %}

@@ -1,0 +1,95 @@
+{% extends 'base.html'  %}
+{% load static %}
+{% block title %}User Registration{% endblock title %}
+{% block main-content %}
+
+<hr>
+<body style="background-color: rgb(62, 66, 66)">
+
+    <section class="text-center text-lg-start">
+        <style>
+    
+          .cascading-right {
+            margin-right: -50px;
+          }
+      
+          @media (max-width: 991.98px) {
+            .cascading-right {
+              margin-right: 0;
+            }
+          }
+        </style>
+       <!-- background: hsla(0, 0%, 100%, 0.55);
+        Jumbotron -->
+        <div class="container py-4">
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="card cascading-right" style="
+                  background: hsla(29, 29%, 62%, 0.329);
+                  backdrop-filter: blur(30px);
+                  ">
+                <div class="card-body p-5 shadow-5 text-center">
+                  <h2 class="fw-bold mb-5">Register Now</h2>
+                  <form method="post" enctype="multipart/form-data" >
+                    {% csrf_token %}
+    
+                    <!-- 2 column grid layout with text inputs for the first and last names-->
+                    <div class="row ">
+                        <div class="col-md-12 mb-12 ">
+                            {% for fm in form %}
+                            <div class="form-outline text-center">
+                                {{fm.label_tag}} {{fm}} <br>
+                                <small class="text-danger">
+                                    {{fm.errors|striptags}}
+                                </small><br>
+                            </div>
+                            {% endfor %}
+
+                            <input type="submit" value="Register" class="btn btn-primary ms-5">
+                        
+                            <div class="text-center ms-2 fw-bold text-primary">
+                                <small>
+                                    Existing User?
+                                    <a href="{% url 'login' %}" class="text-danger">
+                                        Login Now
+                                    </a>
+                                </small>
+                            </div>
+            
+            
+                            {% if form.non_field_errors %}
+                                {% for errors in form.non_field_errors %}
+                                    <p class="alert alter-danger my-3">{{errors}}</p>
+                                {% endfor %}
+                            {% endif%}
+            
+                            {% if messages %}
+                                {% for msg in messages %}
+                                    <div class="alert alert-{{msg.tags}}" role="alert">
+                                        {{msg}}
+                                    </div>
+                                {% endfor %}                
+                            {% endif %}
+                        
+                        </div>
+                    </div>
+                        </form>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <img src="{% static 'Images/login_Img_2.jpeg' %}" class="w-100 rounded-4 shadow-4"
+                alt="" height="750px" />
+            </div>
+          </div>
+        </div>
+   
+      </section>
+   
+    
+      
+    </body>
+    <br><br>
+
+{% endblock main-content %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} View_Prod {% endblock title %}
+{% block main-content %}    
+<style>
+    div  a{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-2 my-5">
+            <h3>Category</h3>
+            <a href="{% url 'view-title' 'all' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>ALL</h5>
+            </a>
+            <a href="{% url 'view-title' 'MILK' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Milk</h5>
+            </a>
+            <a href="{% url 'view-title' 'CURD' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Curd</h5>
+            </a>
+            <a href="{% url 'view-title' 'MILKSHAKE' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>MilkShakes</h5>
+            </a>
+            <a href="{% url 'view-title' 'PANEER' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Paneer</h5>
+            </a>
+            <a href="{% url 'view-title' 'GHEE' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Ghee</h5>
+            </a>
+            <a href="{% url 'view-title' 'LASSI' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Lassi</h5>
+            </a>
+            <a href="{% url 'view-title' 'CHEESE' %}" class="list-group-item list-group-item-action text-center"  aria-current="true">
+                <h5>Cheese</h5>
+            </a>
+            <a href="{% url 'view-title' 'ICECREAM' %}" class="list-group-item list-group-item-action text-center" aria-current="true">
+                <h5>Ice-Creams</h5>
+            </a>
+       
+        </div>
+     
+        <div class="col-10 ">
+           
+            <div class='row  m-5 p-3 bg-white'>
+                {% for i in product %}
+                <div class="col-5 text-center border rounded " id="category">
+                    <a href="#">
+                        <img src="{{i.product_Image.url}}" alt="err" width="100%" height="275"> 
+                        <h6>{{i.title}}</h6>
+                    </a>     
+                </div>
+                <div class="col-7 text-end border rounded p-3 ">
+                    <small>
+                        <h6>Desc: {{i.description}}</h6><br>
+                        <h6>Composition : {{i.composition}}</h6>
+                    </small><br>
+                    <h6>Price : {{i.discounted_price}}</h6>
+                    <h6>Category : {{i.category}}</h6>
+                </div>
+                {% endfor %}
+
+            </div>
+           
+        </div>
+        
+    </div>
+</div>
+{% endblock main-content %}
+
+

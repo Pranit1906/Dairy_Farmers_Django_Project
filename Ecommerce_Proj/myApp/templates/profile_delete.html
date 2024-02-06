@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Updating Profile{% endblock title %}
+{% block main-content %}
+<h3 class="text-center"> Profile Deleting Page</h3>
+<div class="container my-4 p-4">
+    <form method="post" class="text-center border">
+        {% csrf_token %}<br>
+        <p class="fs-3">Are you sure you want to delete <i><b><u>{{customer.name}}</u></b></i> ?</p><br>
+        <input type="submit" value="Delete" class="btn btn-danger mb-3"> 
+        <h3 class="btn btn-info mb-3"><a class="text-decoration-none text-dark" href="{% url 'profile_view' %}">Cancel</a></h3>
+        
+        {% if messages %}
+            {% for msg in messages %}
+                <div class="alert alert-{{msg.tags}}">
+                    {{msg}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </form>
+</div>
+
+
+{% endblock main-content %}

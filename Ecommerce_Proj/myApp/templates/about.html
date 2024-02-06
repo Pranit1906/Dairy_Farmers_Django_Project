@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block banner_slider %}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/Banner/Fresh_milk_2.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Fresh_cheese_2.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Amul_Banner.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Ghee_Banner_2.webp' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Lassi_Banner_1.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Curd_Banner_1.png' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/IceCream_Banner_1.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endblock banner_slider %}
+
+
+{% block main-content %}
+<h1 class="text-center bg-light fw-bold text-secondary">About Page</h1>
+<div class="container">
+    <div class="border border bg-info shadow p-4 my-3">
+       <h3 class="text-primary"> About Dairy Milk </h3>
+       <p class="fw-normal fs-5"> 
+        Welcome to the world of Dairy Milk, where every sip is a journey into pure indulgence and goodness. We take pride in crafting the finest dairy products, ensuring that every product delivers the rich taste and quality you deserve.
+       </p>
+    </div><br>
+
+    <div class="border border bg-info shadow p-4 mx-3">
+        <h3 class=" fw-bold text-primary"> Our Story </h3>
+        <p class="fw-normal fs-5" >
+            At Dairy Milk, our story is rooted in tradition and a commitment to excellence. We began as a small dairy farm with a passion for providing families with the freshest, most wholesome milk. Over the years, we've grown, but our dedication to quality has remained unwavering.
+        </p>
+    </div><br>
+
+    <div class="border border bg-info shadow p-4 mx-3">
+        <h3 class="text-primary">Our Commitment</h3>
+        <h5>Quality Assurance:</h5>
+        <p class="fw-normal fs-5" >
+            We source our milk from trusted local farms, ensuring that only the highest quality milk goes into our products. Rigorous quality control measures are in place at every step of the production process.
+        </p>
+
+        <h5>Sustainability:</h5>
+        <p class="fw-normal fs-5" >
+            We are committed to sustainable and ethical farming practices. Our farmers prioritize the well-being of their animals, and we strive to minimize our environmental impact.
+        </p>
+    </div><br>
+
+    <div class="border border bg-info shadow p-4 mx-3">
+        <h3 class=" text-primary">Our Products</h3>
+        <h5>Pure & Fresh Milk:</h5>
+        <p class="fw-normal fs-5" >
+            Experience the richness of our pure, fresh milk. From whole milk to skim, we offer a range of options to suit every preference.
+        </p>
+        <h5>Delicious Dairy Treats:</h5>
+        <p class="fw-normal fs-5" >
+            Indulge in our delightful range of dairy treats, from creamy yogurts to artisanal cheeses. Each product is crafted with care to bring joy to your table.
+        </p>
+    </div><br>
+
+    <div class="border border bg-info shadow p-4 mx-3">
+        <h3 class="text-primary">Community Engagement</h3>
+        <p class="fw-normal fs-5" >
+            We believe in giving back to the communities that support us. Learn more about our initiatives to promote dairy education, support local farmers, and contribute to the well-being of our community.
+        </p>
+    </div><br>
+
+    <div class="border border bg-info shadow p-4 mx-3">
+        <h3 class="text-primary">Contact Us</h3>
+        <p class="fw-normal fs-5" >
+            Have questions or feedback? We'd love to hear from you. Reach out to our dedicated customer support team.
+            
+            Thank you for choosing Dairy Milk – where every moment is a celebration of pure, wholesome goodness.
+        </p>
+    </div>
+    <br><br><br>
+
+</div>
+{% endblock main-content %}

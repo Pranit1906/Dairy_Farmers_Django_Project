@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+{% block banner_slider %}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/Banner/Fresh_milk_2.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Fresh_cheese_2.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Amul_Banner.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Ghee_Banner_2.webp' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Lassi_Banner_1.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/Curd_Banner_1.png' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/Banner/IceCream_Banner_1.jpg' %}" class="d-block w-100" alt="...err" height="480">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endblock banner_slider %}
+
+{% block main-content %}
+<h1 class="text-center fw-bold fs-1 bg-light text-danger">Contact Page</h1>
+<div class="container text-start "><br>
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h2 class="text-info">Contact Us</h2>
+        <h3>Customer Support</h3>
+        <p>
+            If you have any questions, concerns, or feedback regarding our dairy products, our customer support team is here to assist you.
+        </p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h3>Phone:</h3>
+        <p>
+            Call us at 0123456789
+        </p>
+
+        <h3>Email:</h3>
+        <p>
+            Send us an email at dairyfarmers@support.co.in
+        </p>
+ 
+        <h3>Business Hours:</h3>
+        <p>
+            Monday - Friday: 9:00 AM to 5:00 PM (Local Time)
+        </p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h3>Corporate Office</h3>
+        <p>
+            Visit our corporate office for business inquiries, partnerships, or to learn more about our company.
+        </p>
+
+        <h3>Address:</h3>
+        <p>
+          Street:  322, Raheja Arcade, Sector - 11, Belapur (cbd)<br>
+          City:   Mumbai<br>
+          State/province/area:    Maharashtra<br>
+          Phone number:  02227563632<br>
+          Zip code:  400614<br>
+          Country calling code:  +91<br>
+          Country:  India<br>
+        </p>
+
+        <h3>Phone:</h3>
+        <p>
+            For business inquiries, please contact 022 2233 45587
+        </p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h3>Media Inquiries</h3>
+        <p>
+            Members of the media can reach out to our communications team for press releases, interviews, and other media-related inquiries.
+        </p>
+
+        <h3>Email:</h3>
+        <p>
+          media.dairyfarmer@yahoo.co.in<br>
+          dairyfarmers.help@gmail.com
+        </p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h3>Distributor Enquiries</h3>
+        <p>
+            Interested in becoming a distributor for our dairy products? Contact our distribution team for more information.
+        </p>
+
+        <h3>Email:</h3>
+        <p>
+            distributer.dairyfarmer@yahoo.co.in <br>
+            dairyfarmers.help@gmail.com
+        </p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body  rounded">
+        <h3>Connect With Us</h3>
+        <p>
+            Follow us on social media to stay updated on the latest news, promotions, and delicious dairy recipes.
+        </p>
+      <div class="d-flex justify-content-start">
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fa-brands fa-facebook"> Facebook</i></a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"> Twitter</i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"> Instagram</i></a></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fa-brands fa-linkedin"> LinkedIn</i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"> Youtube</i></a></li>
+          <li><a href="#"><i class="fa-brands fa-github"> Github</i></a></li>
+        </ul>
+      </div>
+        
+    </div>
+<br><br>
+</div>
+{% endblock main-content %}

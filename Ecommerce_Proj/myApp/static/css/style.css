@@ -1,0 +1,25 @@
+
+
+div .products a{
+    text-decoration: none;
+}
+
+div #cards img{
+    margin: 2px;
+    padding: 12px;
+    border: 1.02px solid rgb(96, 123, 128);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px 2px rgb(129, 161, 153);
+    background-color: rgba(132, 168, 184, 0.489); 
+}
+
+div #cards img:hover{
+    height: 200px;
+
+}
+
+/* div #cards :hover{
+    border: 2px solid rgb(204, 215, 222);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px 2px whitesmoke;
+} */

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}wishlist{% endblock title %}
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="col mt-5">
+            <div class="row">
+                {% for prod in wishlist %}
+                    <div class="col-sm-4 text-center hover-shadow mb-4">
+                        <a href="{% url 'product-details' prod.product.id %}" class="btn">
+                            <div>
+                                <img src="{{prod.product.product_Image.url}}" width="250" height="300" alt="err" >
+                                <h6 class="fw-bold">Product Title : {{prod.product.title}}</h6>
+                                <h6 class="fw-bold text-danger">Disc. Price : Rs. {{prod.product.discounted_price}}/-</h6>
+                                <h6 class="fw-light">Selling Price : <small class="text-decoration-line-through">{{prod.product.selling_price}}</small></h6>
+                            </div>
+                            
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock main-content %}
